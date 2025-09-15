@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), "q's"))
+
 from q1_obfuscation import sum_of_squares_readable, _O0O0
 from q3_selective_encryption import encrypt_sensitive, decrypt_sensitive
 from q4_access_control import User, Resource, can_access
