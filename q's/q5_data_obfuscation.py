@@ -6,9 +6,9 @@ def obfuscate_phone(phone, seed=1337):
     for ch in phone:
         noisy.append(ch)
         for _ in range(rnd.randint(0, 2)):
-            noisy.append(random.choice("ABCDEFGHJKLMNPQRSTUVWXYZ23456789"))
+            noisy.append(random.choice("ABCDEFGHJKLMNPQRSTUVWXYZ"))
     return "".join(noisy)
 
-def deobfuscate_phone(obf, original_length, seed=1337):
+def deobfuscate_phone(obf, original_length):
     digits = [c for c in obf if c.isdigit()]
     return "".join(digits)[:original_length]
